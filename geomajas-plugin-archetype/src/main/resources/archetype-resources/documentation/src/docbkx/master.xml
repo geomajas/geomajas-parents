@@ -47,13 +47,13 @@
 
 	<toc></toc>
 
-	<xi:include href="modules/introduction.xml"
+	<xi:include href="introduction.xml"
 				xmlns:xi="http://www.w3.org/2001/XInclude"/>
 	
-	<xi:include href="modules/configuration.xml"
+	<xi:include href="configuration.xml"
 				xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
-	<xi:include href="modules/howto.xml"
+	<xi:include href="howto.xml"
 				xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
 </book>
