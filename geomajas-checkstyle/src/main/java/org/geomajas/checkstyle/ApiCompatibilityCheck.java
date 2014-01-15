@@ -41,26 +41,38 @@ import java.util.Set;
 public class ApiCompatibilityCheck extends Check {
 
 	private String packageName;
+
 	private String shortClassName;
+
 	private String fullyQualifiedClassName;
+
 	private Map<String, VersionAndCheck> checkApi = new LinkedHashMap<String, VersionAndCheck>();
+
 	private List<String> api = new ArrayList<String>();
+
 	private boolean isAnnotated;
+
 	private boolean isAllMethods;
+
 	private boolean isInterface;
+
 	private boolean isClass;
+
 	private boolean hasConstructor;
+
 	private String classSince;
 
 	private String basedir;
+
 	private String checkInputFile = "src/main/resources/api.txt";
+
 	private String checkOutputFile = "target/api.txt";
-	
-	private static final Set<String> neverApiSignatures;
+
+	private static final Set<String> NEVER_API_SIGNATURES;
 
 	static {
-		neverApiSignatures = new HashSet<String>();
-		neverApiSignatures.add("String toString()");
+		NEVER_API_SIGNATURES = new HashSet<String>();
+		NEVER_API_SIGNATURES.add("String toString()");
 	}
 
 	public void setBasedir(String basedir) {
@@ -115,9 +127,9 @@ public class ApiCompatibilityCheck extends Check {
 
 	@Override
 	public void finishTree(DetailAST rootAst) {
-		if (isClass && isAllMethods &&  !hasConstructor) {
+		if (isClass && isAllMethods && !hasConstructor) {
 			// add default (no-arguments) constructor in api
-			int pos =fullyQualifiedClassName.lastIndexOf('.');
+			int pos = fullyQualifiedClassName.lastIndexOf('.');
 			String signature = fullyQualifiedClassName.substring(pos + 1) + "()";
 			checkCorrectVersion(rootAst, signature, classSince);
 		}
@@ -135,15 +147,15 @@ public class ApiCompatibilityCheck extends Check {
 			case TokenTypes.ANNOTATION_DEF:
 			case TokenTypes.ENUM_DEF:
 				if (null == ast.getParent()) { // do not include inner classes
-					shortClassName = getName(ast); 
+					shortClassName = getName(ast);
 					fullyQualifiedClassName = packageName + "." + shortClassName;
 					checkClassAnnotation(ast);
 					isInterface = (TokenTypes.INTERFACE_DEF == ast.getType());
-					isClass = (TokenTypes.CLASS_DEF == ast.getType()); 
+					isClass = (TokenTypes.CLASS_DEF == ast.getType());
 					if (isAnnotated) {
 						String since = getSince(ast);
 						api.add(fullyQualifiedClassName + "::" + since);
-	
+
 						// @since needs to be specified
 						if ("?".equals(since)) {
 							log(ast, "classMissingSince", fullyQualifiedClassName);
@@ -161,12 +173,12 @@ public class ApiCompatibilityCheck extends Check {
 				break;
 			case TokenTypes.METHOD_DEF:
 			case TokenTypes.CTOR_DEF:
-			case TokenTypes.VARIABLE_DEF:    
+			case TokenTypes.VARIABLE_DEF:
 			case TokenTypes.ENUM_CONSTANT_DEF:
 				if (shortClassName.equals(getName(ast.getParent().getParent()))) { // exclude stuff from inner classes
 					hasConstructor |= (TokenTypes.CTOR_DEF == ast.getType());
 					String signature = getSignature(ast);
-					if (isApi(ast) && !neverApiSignatures.contains(signature)) {
+					if (isApi(ast) && !NEVER_API_SIGNATURES.contains(signature)) {
 						checkCorrectVersion(ast, signature, getSince(ast));
 					}
 				}
@@ -435,6 +447,7 @@ public class ApiCompatibilityCheck extends Check {
 	private class VersionAndCheck {
 
 		private String version;
+
 		private boolean encountered;
 
 		public VersionAndCheck(String version) {

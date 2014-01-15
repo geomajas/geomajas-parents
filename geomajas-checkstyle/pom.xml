@@ -10,25 +10,20 @@
   -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<packaging>jar</packaging>
+
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
 		<version>7</version>
 	</parent>
-	<modelVersion>4.0.0</modelVersion>
+
 	<groupId>org.geomajas</groupId>
 	<artifactId>geomajas-checkstyle</artifactId>
-	<packaging>jar</packaging>
-	<version>1.0.9-SNAPSHOT</version>
+
 	<name>Geomajas checkstyle configuration</name>
 	<description>Geomajas checkstyle configuration</description>
-	<url>http://files.geomajas.org/maven/trunk/geomajas-checkstyle</url>
-
-	<scm>
-		<connection>scm:svn:https://svn.geomajas.org/majas/trunk/build-tools/geomajas-checkstyle</connection>
-		<developerConnection>scm:svn:https://svn.geomajas.org/majas/trunk/build-tools/geomajas-checkstyle</developerConnection>
-		<url>http://ci.geomajas.org/svn/repos/Geomajas/list/trunk/build-tools/geomajas-checkstyle</url>
-	</scm>
 
 	<organization>
 		<name>Geosparc</name>
@@ -82,10 +77,26 @@
 			<artifactId>google-collections</artifactId>
 			<version>0.9</version>
 		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.5-DF</version>
+				<!-- Disable checkstyle -->
+				<executions>
+					<execution>
+						<phase>none</phase>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
