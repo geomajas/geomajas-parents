@@ -20,22 +20,19 @@
 	</parent>
 
 	<groupId>org.geomajas.project</groupId>
-	<artifactId>geomajas-build-tools</artifactId>
+	<artifactId>geomajas-parents</artifactId>
 	<version>2.0.0-SNAPSHOT</version>
 
 	<scm>
-		<connection>scm:git:git@github.com:geomajas/geomajas-build-tools.git</connection>
-		<developerConnection>scm:git:git@github.com:geomajas/geomajas-build-tools.git</developerConnection>
-		<url>https://github.com/geomajas/geomajas-build-tools.git</url>
+		<connection>scm:git:git@github.com:geomajas/geomajas-parents.git</connection>
+		<developerConnection>scm:git:git@github.com:geomajas/geomajas-parents.git</developerConnection>
+		<url>https://github.com/geomajas/geomajas-parents.git</url>
 	</scm>
 
 	<modules>
 		<module>geomajas-al-parent</module>
-		<module>geomajas-checkstyle</module>
-		<module>geomajas-doc-parent</module>
-		<module>geomajas-jetty-runner</module>
-		<module>geomajas-maven-plugin</module>
 		<module>geomajas-parent</module>
+		<module>geomajas-doc-parent</module>
 	</modules>
 
 	<dependencyManagement>
@@ -101,84 +98,9 @@
 		</dependencies>
 	</dependencyManagement>
 
+
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>1.2</version>
-				<executions>
-					<execution>
-						<id>enforce-versions</id>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
-						<configuration>
-							<rules>
-								<requireJavaVersion>
-									<version>1.6</version>
-								</requireJavaVersion>
-								<requireUpperBoundDeps />
-							</rules>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>2.5-DF</version>
-				<configuration>
-					<configLocation>config/geomajas-checkstyle.xml</configLocation>
-				</configuration>
-				<executions>
-					<execution>
-						<phase>verify</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-				<dependencies>
-					<dependency>
-						<groupId>org.geomajas</groupId>
-						<artifactId>geomajas-checkstyle</artifactId>
-						<version>${project.version}</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
-				<configuration>
-					<encoding>utf8</encoding>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.3.1</version>
-				<configuration>
-					<archive>
-						<manifest>
-							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-						</manifest>
-						<manifestEntries>
-							<Short-description>${project.name}</Short-description>
-							<Description>${project.description}</Description>
-							<Version>${project.version}</Version>
-							<License>AGPLv3</License>
-							<More-info>http://www.geomajas.org/ and http://www.geosparc.com/</More-info>
-						</manifestEntries>
-						<compress>true</compress>
-						<index>true</index>
-					</archive>
-				</configuration>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
@@ -361,6 +283,7 @@
 	<properties>
 		<geomajas-slf4j-version>1.6.4</geomajas-slf4j-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<geomajas-build-tools-version>2.0.0-M1</geomajas-build-tools-version>
 	</properties>
 
 </project>
