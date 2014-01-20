@@ -283,7 +283,7 @@
 	<properties>
 		<geomajas-slf4j-version>1.6.4</geomajas-slf4j-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<geomajas-build-tools-version>2.0.0-M1</geomajas-build-tools-version>
+		<geomajas-build-tools-version>2.0.0-SNAPSHOT</geomajas-build-tools-version>
 	</properties>
 
 </project>
