@@ -35,6 +35,14 @@
 		<module>geomajas-doc-parent</module>
 	</modules>
 
+	<distributionManagement>
+		<snapshotRepository>
+			<id>geomajas-nexus-snapshots</id>
+			<name>Geomajas Nexus Snapshot</name>
+			<url>http://apps.geomajas.org/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
