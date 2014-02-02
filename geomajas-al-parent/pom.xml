@@ -47,6 +47,7 @@
 				<version>2.5-DF</version>
 				<configuration>
 					<configLocation>config/geomajas-apache-checkstyle.xml</configLocation>
+                    <consoleOutput>true</consoleOutput>
 				</configuration>
 				<executions>
 					<execution>
