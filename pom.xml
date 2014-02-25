@@ -96,12 +96,12 @@
 			<dependency>
 				<groupId>org.seleniumhq.selenium</groupId>
 				<artifactId>selenium-java</artifactId>
-				<version>2.31.0</version>
+				<version>${selenium-version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.seleniumhq.selenium</groupId>
 				<artifactId>selenium-server</artifactId>
-				<version>2.31.0</version>
+				<version>${selenium-version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -292,6 +292,7 @@
 		<geomajas-slf4j-version>1.6.4</geomajas-slf4j-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<geomajas-build-tools-version>2.0.0</geomajas-build-tools-version>
+		<selenium-version>2.39.0</selenium-version>
 	</properties>
 
 </project>
