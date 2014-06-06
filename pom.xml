@@ -106,7 +106,6 @@
 		</dependencies>
 	</dependencyManagement>
 
-
 	<build>
 		<plugins>
 			<plugin>
@@ -184,10 +183,31 @@
 					</configuration>
 				</plugin>
 
-				<plugin>
-					<artifactId>maven-resources-plugin</artifactId>
-					<version>2.4.3</version>
-				</plugin>
+                <plugin>
+                    <groupId>com.keyboardsamurais.maven</groupId>
+                    <artifactId>maven-timestamp-plugin</artifactId>
+                    <version>1.0</version>
+                    <configuration>
+                        <propertyName>buildNumber</propertyName>
+                        <timestampPattern>yyyyMMddHHmm</timestampPattern>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>create</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version>
+                    <configuration>
+                        <escapeString>\</escapeString>
+                    </configuration>
+                </plugin>
 
 				<!--Configuration to store Eclipse m2e settings only.Has no influence on the Maven build itself.-->
 				<plugin>
@@ -289,9 +309,9 @@
 	</profiles>
 
 	<properties>
-		<geomajas-slf4j-version>1.6.4</geomajas-slf4j-version>
+		<geomajas-slf4j-version>1.7.7</geomajas-slf4j-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<geomajas-build-tools-version>2.0.1-SNAPSHOT</geomajas-build-tools-version>
+		<geomajas-build-tools-version>2.1.0</geomajas-build-tools-version>
 		<selenium-version>2.39.0</selenium-version>
 	</properties>
 
