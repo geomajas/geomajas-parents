@@ -40,14 +40,6 @@
 		</developer>
 	</developers>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.geomajas.documentation</groupId>
-			<artifactId>geomajas-jdocbook-style</artifactId>
-			<version>${documentation-parent-version}</version>
-		</dependency>
-	</dependencies>
-
 	<profiles>
 		<profile>
 			<id>documentation</id>

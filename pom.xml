@@ -309,9 +309,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<geomajas-build-tools-version>2.1.0</geomajas-build-tools-version>
 		<selenium-version>2.39.0</selenium-version>
-		<!-- explicitly have this projects version, because sub project might have a different version -->
-		<!-- this is important for geomajas-jdocbook-style -->
-		<documentation-parent-version>2.3.1</documentation-parent-version>
 	</properties>
 
 </project>

@@ -21,6 +21,16 @@
 
 	<artifactId>geomajas-parents-documentation-all</artifactId>
 
+	<dependencyManagement>
+		<dependencies>
+		<dependency>
+		<groupId>org.geomajas.documentation</groupId>
+		<artifactId>geomajas-jdocbook-style</artifactId>
+		<version>${project.version}</version>
+		</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<name>Geomajas parent documentation all</name>
 	<description>
 		Geomajas is a component framework for building rich Internet applications (RIA) with sophisticated capabilities
