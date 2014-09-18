@@ -30,6 +30,7 @@
 
 	<modules>
 		<module>geomajas-doc-parent</module>
+		<module>style</module>
 	</modules>
 
 </project>
