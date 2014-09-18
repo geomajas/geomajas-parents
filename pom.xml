@@ -311,7 +311,7 @@
 		<selenium-version>2.39.0</selenium-version>
 		<!-- explicitly have this projects version, because sub project might have a different version -->
 		<!-- this is important for geomajas-jdocbook-style -->
-		<documentation-parent-version>2.4.0-SNAPSHOT</documentation-parent-version>
+		<documentation-parent-version>2.3.1</documentation-parent-version>
 	</properties>
 
 </project>
