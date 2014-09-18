@@ -100,7 +100,7 @@
 					<plugin>
 						<groupId>org.geomajas</groupId>
 						<artifactId>geomajas-maven-plugin</artifactId>
-						<version>2.3.0</version>
+						<version>${geomajas-build-tools-version}</version>
 						<executions>
 							<execution>
 								<id>extract-listings-plugin</id>
