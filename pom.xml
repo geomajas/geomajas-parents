@@ -32,7 +32,7 @@
 	<modules>
 		<module>geomajas-al-parent</module>
 		<module>geomajas-parent</module>
-		<module>geomajas-doc-parent</module>
+		<module>documentation</module>
 	</modules>
 
 	<distributionManagement>
