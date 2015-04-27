@@ -104,7 +104,7 @@
 						<configuration>
 							<rules>
 								<requireJavaVersion>
-									<version>1.6</version>
+									<version>1.7</version>
 								</requireJavaVersion>
 								<requireUpperBoundDeps />
 							</rules>
@@ -116,11 +116,11 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.3</version>
 				<configuration>
 					<encoding>utf8</encoding>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 			<plugin>
