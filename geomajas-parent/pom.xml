@@ -104,7 +104,7 @@
 						<configuration>
 							<rules>
 								<requireJavaVersion>
-									<version>1.7</version>
+									<version>${geomajas-version-java}</version>
 								</requireJavaVersion>
 								<requireUpperBoundDeps />
 							</rules>
@@ -119,8 +119,8 @@
 				<version>3.3</version>
 				<configuration>
 					<encoding>utf8</encoding>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>${geomajas-version-java}</source>
+					<target>${geomajas-version-java}</target>
 				</configuration>
 			</plugin>
 			<plugin>
