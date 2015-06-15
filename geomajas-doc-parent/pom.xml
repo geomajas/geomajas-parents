@@ -51,7 +51,7 @@
 					<plugin>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>build-helper-maven-plugin</artifactId>
-						<version>1.5</version>
+						<version>${geomajas-version-build-helper-maven-plugin}</version>
 						<executions>
 							<execution>
 								<id>add-resource</id>
@@ -77,7 +77,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-dependency-plugin</artifactId>
-						<version>2.1</version>
+						<version>${geomajas-version-maven-dependency-plugin}</version>
 						<executions>
 							<execution>
 								<id>explode-style</id>
@@ -153,12 +153,12 @@
 					<plugin>
 						<groupId>com.agilejava.docbkx</groupId>
 						<artifactId>docbkx-maven-plugin</artifactId>
-						<version>2.0.15</version>
+						<version>${geomajas-version-docbkx-maven-plugin}</version>
 						<dependencies>
 							<dependency>
 								<groupId>org.docbook</groupId>
 								<artifactId>docbook-xml</artifactId>
-								<version>4.4</version>
+								<version>${geomajas-version-docbook-xm}</version>
 								<scope>runtime</scope>
 							</dependency>
 						</dependencies>
@@ -205,7 +205,6 @@
 					<plugin>
 						<groupId>org.eclipse.m2e</groupId>
 						<artifactId>lifecycle-mapping</artifactId>
-						<version>1.0.0</version>
 						<configuration>
 							<mappingId>customizable</mappingId>
 						</configuration>

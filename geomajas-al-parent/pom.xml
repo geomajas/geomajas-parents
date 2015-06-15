@@ -43,7 +43,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>2.5-DF</version>
+				<version>${geomajas-version-maven-checkstyle-plugin}</version>
 				<configuration>
 					<configLocation>config/geomajas-apache-checkstyle.xml</configLocation>
 					<logViolationsToConsole>true</logViolationsToConsole>
@@ -67,9 +67,9 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>${geomajas-version-maven-compiler-plugin}</version>
 				<configuration>
-					<encoding>utf8</encoding>
+					<encoding>${geomajas-version-compiler-encoding}</encoding>
 					<source>${geomajas-version-java}</source>
 					<target>${geomajas-version-java}</target>
 				</configuration>
@@ -77,7 +77,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.3.1</version>
+				<version>${geomajas-version-maven-jar-plugin}</version>
 				<configuration>
 					<archive>
 						<manifest>
