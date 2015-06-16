@@ -53,18 +53,18 @@
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>servlet-api</artifactId>
-				<version>2.5</version>
+				<version>${geomajas-version-javax-servlet-api}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>4.10</version>
+				<version>${geomajas-version-junit}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.easytesting</groupId>
 				<artifactId>fest-assert</artifactId>
-				<version>1.4</version>
+				<version>${geomajas-version-fest-assert}</version>
 			</dependency>
 
 			<dependency>
@@ -90,12 +90,12 @@
 			<dependency>
 				<groupId>commons-logging</groupId>
 				<artifactId>commons-logging</artifactId>
-				<version>99.0-does-not-exist</version>
+				<version>${geomajas-version-commons-logging}</version>
 			</dependency>
 			<dependency>
 				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-classic</artifactId>
-				<version>1.0.0</version>
+				<version>${geomajas-version-logback-classic}</version>
 			</dependency>
 
 			<dependency>
@@ -116,7 +116,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.8</version>
+				<version>${geomajas-version-maven-javadoc-plugin}</version>
 				<configuration>
 					<show>public</show>
 					<nohelp>true</nohelp>
@@ -142,12 +142,12 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.7</version>
+				<version>${geomajas-version-maven-antrun-plugin}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-				<version>2.1.2</version>
+				<version>${geomajas-version-maven-source-plugin}</version>
 				<executions>
 					<execution>
 						<goals>
@@ -163,13 +163,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.11</version>
+				<version>${geomajas-version-maven-surefire-plugin}</version>
 			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.1.1</version>
+				<version>${geomajas-version-maven-war-plugin}</version>
 			</plugin>
 		</plugins>
 		<pluginManagement>
@@ -177,13 +177,13 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-clean-plugin</artifactId>
-					<version>2.4.1</version>
+					<version>${geomajas-version-maven-clean-plugin}</version>
 				</plugin>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-eclipse-plugin</artifactId>
-					<version>2.8</version>
+					<version>${geomajas-version-maven-eclipse-plugin}</version>
 					<configuration>
 						<wtpmanifest>true</wtpmanifest>
 						<wtpapplicationxml>true</wtpapplicationxml>
@@ -199,7 +199,7 @@
                 <plugin>
                     <groupId>com.keyboardsamurais.maven</groupId>
                     <artifactId>maven-timestamp-plugin</artifactId>
-                    <version>1.0</version>
+                    <version>${geomajas-version-maven-timestamp-plugin}</version>
                     <configuration>
                         <propertyName>buildNumber</propertyName>
                         <timestampPattern>yyyyMMddHHmm</timestampPattern>
@@ -216,7 +216,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
-                    <version>2.6</version>
+                    <version>${geomajas-version-maven-resources-plugin}</version>
                     <configuration>
                         <escapeString>\</escapeString>
                     </configuration>
@@ -226,7 +226,7 @@
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
+					<version>${geomajas-version-eclipse-m2e-lifecycle-mapping}</version>
 					<configuration>
 						<lifecycleMappingMetadata>
 							<pluginExecutions>
@@ -293,7 +293,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.4</version>
+						<version>${geomajas-version-maven-gpg-plugin}</version>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
@@ -310,11 +310,41 @@
 	</profiles>
 
 	<properties>
-		<geomajas-slf4j-version>1.7.7</geomajas-slf4j-version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Geomajas versions -->
 		<geomajas-build-tools-version>2.5.0</geomajas-build-tools-version>
+        <!-- logging versions-->
+		<geomajas-slf4j-version>1.7.7</geomajas-slf4j-version>
+		<geomajas-version-logback-classic>1.0.0</geomajas-version-logback-classic>
+		<geomajas-version-commons-logging>99.0-does-not-exist</geomajas-version-commons-logging>
+        <!-- encoding versions -->
+        <geomajas-version-compiler-encoding>utf8</geomajas-version-compiler-encoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- maven plugin versions -->
+		<geomajas-version-maven-antrun-plugin>1.7</geomajas-version-maven-antrun-plugin>
+		<geomajas-version-maven-checkstyle-plugin>2.5-DF</geomajas-version-maven-checkstyle-plugin>
+		<geomajas-version-maven-clean-plugin>2.4.1</geomajas-version-maven-clean-plugin>
+		<geomajas-version-maven-compiler-plugin>3.3</geomajas-version-maven-compiler-plugin>
+		<geomajas-version-maven-dependency-plugin>2.1</geomajas-version-maven-dependency-plugin>
+		<geomajas-version-maven-eclipse-plugin>2.8</geomajas-version-maven-eclipse-plugin>
+		<geomajas-version-maven-enforcer-plugin>1.2</geomajas-version-maven-enforcer-plugin>
+		<geomajas-version-maven-gpg-plugin>1.4</geomajas-version-maven-gpg-plugin>
+		<geomajas-version-maven-jar-plugin>2.3.1</geomajas-version-maven-jar-plugin>
+		<geomajas-version-maven-javadoc-plugin>2.8</geomajas-version-maven-javadoc-plugin>
+		<geomajas-version-maven-resources-plugin>2.6</geomajas-version-maven-resources-plugin>
+		<geomajas-version-maven-source-plugin>2.1.2</geomajas-version-maven-source-plugin>
+		<geomajas-version-maven-surefire-plugin>2.11</geomajas-version-maven-surefire-plugin>
+		<geomajas-version-maven-timestamp-plugin>1.0</geomajas-version-maven-timestamp-plugin>
+		<geomajas-version-maven-war-plugin>2.1.1</geomajas-version-maven-war-plugin>
+		<geomajas-version-build-helper-maven-plugin>1.5</geomajas-version-build-helper-maven-plugin>
+		<geomajas-version-docbkx-maven-plugin>2.0.15</geomajas-version-docbkx-maven-plugin>
+        <!-- other versions -->
 		<selenium-version>2.39.0</selenium-version>
-		<geomajas-version-java>1.7</geomajas-version-java>
+        <geomajas-version-java>1.7</geomajas-version-java>
+		<geomajas-version-javax-servlet-api>2.5</geomajas-version-javax-servlet-api>
+		<geomajas-version-eclipse-m2e-lifecycle-mapping>1.0.0</geomajas-version-eclipse-m2e-lifecycle-mapping>
+		<geomajas-version-junit>4.10</geomajas-version-junit>
+		<geomajas-version-fest-assert>1.4</geomajas-version-fest-assert>
+		<geomajas-version-docbook-xm>4.4</geomajas-version-docbook-xm>
 	</properties>
 
 </project>
