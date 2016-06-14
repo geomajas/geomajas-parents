@@ -21,7 +21,7 @@
 
 	<groupId>org.geomajas.project</groupId>
 	<artifactId>geomajas-parents</artifactId>
-	<version>2.6.1-SNAPSHOT</version>
+	<version>2.6.1</version>
 
 	<scm>
 		<connection>scm:git:git@github.com:geomajas/geomajas-parents.git</connection>
