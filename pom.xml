@@ -314,7 +314,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<geomajas-build-tools-version>2.6.0</geomajas-build-tools-version>
 		<selenium-version>2.39.0</selenium-version>
-		<geomajas-version-java>1.7</geomajas-version-java>
+		<geomajas-version-java>1.8</geomajas-version-java>
 	</properties>
 
 </project>
